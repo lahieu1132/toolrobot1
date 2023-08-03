@@ -18,7 +18,6 @@ async function onUpdate(item) {
   }
   await get(child(dbRef, adminRole[0] )).then((snapshot) => {
     if (snapshot.exists()) {
-      console.log(snapshot.val());
       postData["Code"] = snapshot.val().Code
       postData["message"] = snapshot.val().message
     } else {

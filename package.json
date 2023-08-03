@@ -1,0 +1,25 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@types/node": "^18.17.1",
+    "nuxt": "^3.6.5",
+    "unplugin-vue-components": "^0.25.1"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.11",
+    "ant-design-vue": "^4.0.0",
+    "firebase": "^10.1.0",
+    "pinia": "^2.1.6",
+    "primevue": "^3.31.0",
+    "sass": "^1.64.2"
+  }
+}

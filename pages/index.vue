@@ -13,13 +13,13 @@ const input1 = reactive([''])
 async function onUpdate(item) {
   const db = getDatabase();
   const postData = {
-    code: "",
+    Code: "",
     message: ""
   }
   await get(child(dbRef, adminRole[0] )).then((snapshot) => {
     if (snapshot.exists()) {
       console.log(snapshot.val());
-      postData["code"] = snapshot.val().code
+      postData["Code"] = snapshot.val().Code
       postData["message"] = snapshot.val().message
     } else {
       console.log("No data available");
@@ -29,7 +29,7 @@ async function onUpdate(item) {
   });
 
   const updates = {};
-  updates['App1'] = {...postData, message: item};
+  updates[adminRole[0]] = {...postData, message: item};
   try {
     await update(ref(db), updates);
     alert(`cập nhật giá trị ${item} bởi ${adminRole[0]} thành công`)
